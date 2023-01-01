@@ -136,6 +136,7 @@ abstract class BaseModel implements ArrayAccess, Arrayable
      * @return void
      * @since 5.0.0
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->$offset = $value;
