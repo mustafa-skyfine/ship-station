@@ -99,6 +99,7 @@ abstract class BaseModel implements ArrayAccess, Arrayable
      * The return value will be casted to boolean if non-boolean was returned.
      * @since 5.0.0
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return property_exists($this, $offset);
@@ -115,6 +116,7 @@ abstract class BaseModel implements ArrayAccess, Arrayable
      * @return mixed Can return all value types.
      * @since 5.0.0
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->$offset;
@@ -150,6 +152,7 @@ abstract class BaseModel implements ArrayAccess, Arrayable
      * @return void
      * @since 5.0.0
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->$offset);
